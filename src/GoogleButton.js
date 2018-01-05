@@ -33,7 +33,7 @@ export default class GoogleButton extends PureComponent {
     if (this.props.disabled) {
       return { ...baseStyle, ...disabledStyle }
     }
-    return baseStyle
+    return Object.assign({}, baseStyle, this.props.style)
   }
 
   mouseOver = () => {
